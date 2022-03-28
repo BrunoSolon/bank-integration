@@ -3,26 +3,34 @@
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> . Code challenge to integrate with 2 fake Bank APIs using the best software design patterns
+> Code challenge to integrate with 2 fake Bank APIs using the best software design patterns
 
 ### About:
+It was used TDD & DDD in the development of this project.
+
 There are two endpoints which returns all information from all available bank integrations and display them, one after the other.
  - /api/balances
  - /api/transactions
- 
-It was used TDD & DDD in the development of this project.
 
 ## Development Environment Setup
 
 1.  Make sure you have `nvm`, node `v12.8.0` or `LTS` version of node installed
-2.  Install `yarn` - `npm install -g yarn`.
+2.  Install `yarn` or `npm install`
 
 ## Usage
 
 ```sh
 yarn run start:dev
+or
+npm run start:dev
 ```
-You can send a GET request to the endpoints listed above to check the informations
+
+You can send a GET request to the endpoints listed above to check the all information
+For instance:
+```sh 
+    curl --location --request GET 'http://localhost:8080/api/balances'
+    curl --location --request GET 'http://localhost:8080/api/transactions'
+```
 
 ## Author
 
