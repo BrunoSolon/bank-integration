@@ -4,8 +4,8 @@ import { GetAllTransactionsUseCase } from './GetAllTransactionsUseCase';
 
 import { Bank1AccountSource } from '../../../../infra/providers/bank1/Bank1AccountSource';
 import { Bank2AccountSource } from '../../../../infra/providers/bank2/Bank2AccountSource';
-import { Bank1ProviderImp } from '../../../../infra/providers/implementations/Bank1ProviderImp';
-import { Bank2ProviderImp } from '../../../../infra/providers/implementations/Bank2ProviderImp';
+import { Bank1ProviderAdapter } from '../../../../infra/providers/implementations/Bank1ProviderAdapter';
+import { Bank2ProviderAdapter } from '../../../../infra/providers/implementations/Bank2ProviderAdapter';
 
 let bank1AccountSource: Bank1AccountSource;
 let bank2AccountSource: Bank2AccountSource;
@@ -17,8 +17,8 @@ describe('get all transactions useCase', () => {
     bank1AccountSource = new Bank1AccountSource();
     bank2AccountSource = new Bank2AccountSource();
 
-    const bank1Provider = new Bank1ProviderImp(bank1AccountSource);
-    const bank2Provider = new Bank2ProviderImp(bank2AccountSource);
+    const bank1Provider = new Bank1ProviderAdapter(bank1AccountSource);
+    const bank2Provider = new Bank2ProviderAdapter(bank2AccountSource);
 
     getAllTransactionsUseCase = new GetAllTransactionsUseCase([
       bank1Provider,
@@ -36,7 +36,7 @@ describe('get all transactions useCase', () => {
   test('should return transaction from bank 2', async () => {
     bank2AccountSource = new Bank2AccountSource();
 
-    const bank2Provider = new Bank2ProviderImp(bank2AccountSource);
+    const bank2Provider = new Bank2ProviderAdapter(bank2AccountSource);
 
     getAllTransactionsUseCase = new GetAllTransactionsUseCase([bank2Provider]);
 

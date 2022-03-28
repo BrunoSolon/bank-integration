@@ -4,27 +4,26 @@ import {
   IBankProvider,
   Transaction
 } from '../IBankProvider';
-import { Bank1AccountSource } from '../bank1/Bank1AccountSource';
+import { Bank2AccountSource } from '../bank2/Bank2AccountSource';
 import { waitPromise } from '../../../utils/fakePromise';
 
-export class Bank1ProviderImp implements IBankProvider {
-  constructor(private bank1AccountSource: Bank1AccountSource) {}
+export class Bank2ProviderAdapter implements IBankProvider {
+  constructor(private bank2AccountSource: Bank2AccountSource) {}
 
   getBankInfo(): BankInfo {
-    return { id: 1, name: 'Bank 1' }; // Temporarily mocked
+    return { id: 2, name: 'Bank 2' }; // Temporarily mocked
   }
 
   async getBalance(): Promise<Balance> {
     await waitPromise();
-    const balance = this.bank1AccountSource.getAccountBalance(1);
-    const currency = this.bank1AccountSource.getAccountCurrency(1);
+    const { balance, currency } = this.bank2AccountSource.getBalance(1);
 
     return { balance, currency };
   }
 
   async getTransactions(): Promise<Transaction[]> {
     await waitPromise();
-    const result = this.bank1AccountSource.getTransactions(1, null, null);
+    const result = this.bank2AccountSource.getTransactions(1, null, null);
 
     return result.map((transaction) => ({
       amount: transaction.amount,
