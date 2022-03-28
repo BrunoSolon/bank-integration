@@ -1,30 +1,22 @@
 <h1 align="center">Welcome Bank Integration Challenge 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="http://localhost:8080/docs" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
-  <a href="#" target="_blank">
-    <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
-  </a>
 </p>
 
-> . Project to 
+> . Code challenge to integrate with 2 fake Banks APIs using the best software designs patterns
 
-## Install
+### About:
+It was used TDD & DDD in the development of this project.
 
-```sh
-yarn
-or
-npm install
-```
+## Development Environment Setup
+
+1.  Make sure you have `nvm`, node `v12.8.0` or `LTS` version of node installed
+2.  Install `yarn` - `npm install -g yarn`.
 
 ## Usage
 
 ```sh
 yarn run start:dev
-or
-npm run start:dev
 ```
 
 ## Author
