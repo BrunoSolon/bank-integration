@@ -25,7 +25,7 @@ or
 npm run start:dev
 ```
 
-You can send a GET request to the endpoints listed above to check the all information
+When the server starts, you can send a GET request to the endpoints listed above to check the all information
 For instance:
 ```sh 
     curl --location --request GET 'http://localhost:8080/api/balances'
