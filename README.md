@@ -6,6 +6,10 @@
 > . Code challenge to integrate with 2 fake Bank APIs using the best software design patterns
 
 ### About:
+There are two endpoints which returns all information from all available bank integrations and display them, one after the other.
+ - /api/balances
+ - /api/transactions
+ 
 It was used TDD & DDD in the development of this project.
 
 ## Development Environment Setup
@@ -18,6 +22,7 @@ It was used TDD & DDD in the development of this project.
 ```sh
 yarn run start:dev
 ```
+You can send a GET request to the endpoints listed above to check the informations
 
 ## Author
 
