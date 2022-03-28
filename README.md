@@ -5,8 +5,10 @@
 
 > Code challenge to integrate with 2 fake Bank APIs using the best software design patterns
 
-### About:
+### NOTE:
 It was used TDD & DDD in the development of this project.
+
+The bank1 and bank2 code in provider section is the same of the original challenge purpose.
 
 There are two endpoints which returns all information from all available bank integrations and display them, one after the other.
  - /api/balances
