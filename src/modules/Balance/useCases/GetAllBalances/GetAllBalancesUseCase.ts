@@ -1,4 +1,4 @@
-import { IBankProvider } from '../../../../infra/providers/IBankProvider';
+import { IBankProvider } from '../../../../infra/providers/bank/IBankProvider';
 import { BalanceDTO, BalanceResponse } from '../../domain/BalanceDTO';
 
 export class GetAllBalancesUseCase {

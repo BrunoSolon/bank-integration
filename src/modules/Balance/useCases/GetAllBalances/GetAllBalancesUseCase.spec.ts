@@ -2,10 +2,10 @@
 
 import { GetAllBalancesUseCase } from './GetAllBalancesUseCase';
 
-import { Bank1AccountSource } from '../../../../infra/providers/bank1/Bank1AccountSource';
-import { Bank2AccountSource } from '../../../../infra/providers/bank2/Bank2AccountSource';
-import { Bank1ProviderAdapter } from '../../../../infra/providers/implementations/Bank1ProviderAdapter';
-import { Bank2ProviderAdapter } from '../../../../infra/providers/implementations/Bank2ProviderAdapter';
+import { Bank1AccountSource } from '../../../../infra/providers/bank/bank1/Bank1AccountSource';
+import { Bank2AccountSource } from '../../../../infra/providers/bank/bank2/Bank2AccountSource';
+import { Bank1ProviderAdapter } from '../../../../infra/providers/bank/implementations/Bank1ProviderAdapter';
+import { Bank2ProviderAdapter } from '../../../../infra/providers/bank/implementations/Bank2ProviderAdapter';
 
 let bank1AccountSource: Bank1AccountSource;
 let bank2AccountSource: Bank2AccountSource;

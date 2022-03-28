@@ -5,7 +5,7 @@ import {
   Transaction
 } from '../IBankProvider';
 import { Bank2AccountSource } from '../bank2/Bank2AccountSource';
-import { waitPromise } from '../../../utils/fakePromise';
+import { waitPromise } from '../../../../utils/fakePromise';
 
 export class Bank2ProviderAdapter implements IBankProvider {
   constructor(private bank2AccountSource: Bank2AccountSource) {}
@@ -15,14 +15,14 @@ export class Bank2ProviderAdapter implements IBankProvider {
   }
 
   async getBalance(): Promise<Balance> {
-    await waitPromise();
+    await waitPromise(); // simulating an API call
     const { balance, currency } = this.bank2AccountSource.getBalance(1);
 
     return { balance, currency };
   }
 
   async getTransactions(): Promise<Transaction[]> {
-    await waitPromise();
+    await waitPromise(); // simulating an API call
     const result = this.bank2AccountSource.getTransactions(1, null, null);
 
     return result.map((transaction) => ({

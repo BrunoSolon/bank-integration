@@ -2,11 +2,11 @@ import { Controller } from '../../../../core/infra/Controller';
 import { GetAllTransactionsController } from './GetAllTransactionsController';
 import { GetAllTransactionsUseCase } from './GetAllTransactionsUseCase';
 
-import { Bank1AccountSource } from '../../../../infra/providers/bank1/Bank1AccountSource';
-import { Bank2AccountSource } from '../../../../infra/providers/bank2/Bank2AccountSource';
+import { Bank1AccountSource } from '../../../../infra/providers/bank/bank1/Bank1AccountSource';
+import { Bank2AccountSource } from '../../../../infra/providers/bank/bank2/Bank2AccountSource';
 
-import { Bank1ProviderAdapter } from '../../../../infra/providers/implementations/Bank1ProviderAdapter';
-import { Bank2ProviderAdapter } from '../../../../infra/providers/implementations/Bank2ProviderAdapter';
+import { Bank1ProviderAdapter } from '../../../../infra/providers/bank/implementations/Bank1ProviderAdapter';
+import { Bank2ProviderAdapter } from '../../../../infra/providers/bank/implementations/Bank2ProviderAdapter';
 
 export const makeGetAllTransactionsController = (): Controller => {
   // API wrappers

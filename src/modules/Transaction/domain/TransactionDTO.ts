@@ -1,4 +1,7 @@
-import { BankInfo, Transaction } from '../../../infra/providers/IBankProvider';
+import {
+  BankInfo,
+  Transaction
+} from '../../../infra/providers/bank/IBankProvider';
 
 export interface TransactionResponse {
   idBank: number;
