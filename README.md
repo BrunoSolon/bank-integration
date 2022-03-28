@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> . Code challenge to integrate with 2 fake Banks APIs using the best software designs patterns
+> . Code challenge to integrate with 2 fake Bank APIs using the best software designs patterns
 
 ### About:
 It was used TDD & DDD in the development of this project.
