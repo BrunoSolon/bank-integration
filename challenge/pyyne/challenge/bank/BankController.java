@@ -1,4 +1,4 @@
-package com.pyyne.challenge.bank;
+package com.challenge.bank;
 
 /**
  * Controller that pulls information form multiple bank integrations and prints them to the console.
